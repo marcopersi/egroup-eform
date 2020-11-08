@@ -1,0 +1,35 @@
+{
+  "name": "Location",
+  "fields": [
+    {
+      "fieldName": "postalCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "city",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "stateProvince",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "country",
+      "fieldType": "Country",
+      "fieldValues": "SWITZERLAND,FRANCE,ITALIA,GERMANY,AUSTRIA,SERBIA,LUXEMBOURG"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20201108210053",
+  "javadoc": "not an ignored comment",
+  "entityTableName": "location",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
