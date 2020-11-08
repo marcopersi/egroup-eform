@@ -1,0 +1,15 @@
+export const enum Country {
+  SWITZERLAND = 'SWITZERLAND',
+
+  FRANCE = 'FRANCE',
+
+  ITALIA = 'ITALIA',
+
+  GERMANY = 'GERMANY',
+
+  AUSTRIA = 'AUSTRIA',
+
+  SERBIA = 'SERBIA',
+
+  LUXEMBOURG = 'LUXEMBOURG',
+}

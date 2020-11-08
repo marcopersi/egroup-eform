@@ -1,0 +1,55 @@
+
+// an ignored comment
+/** not an ignored comment */
+
+/**
+ * The Employee entity.
+ */
+entity Employee {
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	hireDate Instant,
+	ibanNo Integer,
+    company Company,
+    language Language,
+	streetAddress String,
+	postalCode String,
+	city String,
+	stateProvince String,
+	country Country
+}
+
+enum Language {
+    FRENCH, ENGLISH, GERMAN, ITALIAN
+}
+
+enum Company {
+	EFRAME, ECARE, TELLCO, REALISATOR
+}
+
+enum Country {
+	SWITZERLAND, FRANCE, ITALIA, GERMANY, AUSTRIA, SERBIA, LUXEMBOURG
+}
+
+// defining multiple OneToMany relationships with comments
+// relationship OneToMany {
+// 	Location to Employee{location}
+// }
+
+//relationship ManyToOne {
+//	Employee{manager} to Employee
+//}
+
+// Set pagination options
+paginate Employee with infinite-scroll
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

@@ -1,0 +1,120 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-employee-heading" jhiTranslate="eFormApp.employee.home.createOrEditLabel">Create or edit a Employee</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="eFormApp.employee.firstName" for="field_firstName">First Name</label>
+                    <input type="text" class="form-control" name="firstName" id="field_firstName"
+                           formControlName="firstName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="eFormApp.employee.lastName" for="field_lastName">Last Name</label>
+                    <input type="text" class="form-control" name="lastName" id="field_lastName"
+                           formControlName="lastName"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="eFormApp.employee.email" for="field_email">Email</label>
+                    <input type="text" class="form-control" name="email" id="field_email"
+                           formControlName="email"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="eFormApp.employee.phoneNumber" for="field_phoneNumber">Phone Number</label>
+                    <input type="text" class="form-control" name="phoneNumber" id="field_phoneNumber"
+                           formControlName="phoneNumber"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="eFormApp.employee.hireDate" for="field_hireDate">Hire Date</label>
+                    <div class="d-flex">
+                        <input id="field_hireDate" type="datetime-local" class="form-control" name="hireDate" formControlName="hireDate" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="eFormApp.employee.ibanNo" for="field_ibanNo">Iban No</label>
+                    <input type="number" class="form-control" name="ibanNo" id="field_ibanNo"
+                           formControlName="ibanNo"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="eFormApp.employee.company" for="field_company">Company</label>
+                    <select class="form-control" name="company" formControlName="company" id="field_company">
+                        <option value="EFRAME">{{ 'eFormApp.Company.EFRAME' | translate }}</option>
+                        <option value="ECARE">{{ 'eFormApp.Company.ECARE' | translate }}</option>
+                        <option value="TELLCO">{{ 'eFormApp.Company.TELLCO' | translate }}</option>
+                        <option value="REALISATOR">{{ 'eFormApp.Company.REALISATOR' | translate }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="eFormApp.employee.language" for="field_language">Language</label>
+                    <select class="form-control" name="language" formControlName="language" id="field_language">
+                        <option value="FRENCH">{{ 'eFormApp.Language.FRENCH' | translate }}</option>
+                        <option value="ENGLISH">{{ 'eFormApp.Language.ENGLISH' | translate }}</option>
+                        <option value="GERMAN">{{ 'eFormApp.Language.GERMAN' | translate }}</option>
+                        <option value="ITALIAN">{{ 'eFormApp.Language.ITALIAN' | translate }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="eFormApp.employee.streetAddress" for="field_streetAddress">Street Address</label>
+                    <input type="text" class="form-control" name="streetAddress" id="field_streetAddress"
+                           formControlName="streetAddress"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="eFormApp.employee.postalCode" for="field_postalCode">Postal Code</label>
+                    <input type="text" class="form-control" name="postalCode" id="field_postalCode"
+                           formControlName="postalCode"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="eFormApp.employee.city" for="field_city">City</label>
+                    <input type="text" class="form-control" name="city" id="field_city"
+                           formControlName="city"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="eFormApp.employee.stateProvince" for="field_stateProvince">State Province</label>
+                    <input type="text" class="form-control" name="stateProvince" id="field_stateProvince"
+                           formControlName="stateProvince"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="eFormApp.employee.country" for="field_country">Country</label>
+                    <select class="form-control" name="country" formControlName="country" id="field_country">
+                        <option value="SWITZERLAND">{{ 'eFormApp.Country.SWITZERLAND' | translate }}</option>
+                        <option value="FRANCE">{{ 'eFormApp.Country.FRANCE' | translate }}</option>
+                        <option value="ITALIA">{{ 'eFormApp.Country.ITALIA' | translate }}</option>
+                        <option value="GERMANY">{{ 'eFormApp.Country.GERMANY' | translate }}</option>
+                        <option value="AUSTRIA">{{ 'eFormApp.Country.AUSTRIA' | translate }}</option>
+                        <option value="SERBIA">{{ 'eFormApp.Country.SERBIA' | translate }}</option>
+                        <option value="LUXEMBOURG">{{ 'eFormApp.Country.LUXEMBOURG' | translate }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

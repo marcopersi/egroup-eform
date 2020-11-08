@@ -1,0 +1,14 @@
+{
+  "eFormApp": {
+    "Country": {
+      "null": "",
+      "SWITZERLAND": "SWITZERLAND",
+      "FRANCE": "FRANCE",
+      "ITALIA": "ITALIA",
+      "GERMANY": "GERMANY",
+      "AUSTRIA": "AUSTRIA",
+      "SERBIA": "SERBIA",
+      "LUXEMBOURG": "LUXEMBOURG"
+    }
+  }
+}

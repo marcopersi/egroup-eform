@@ -1,0 +1,78 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="employee">
+            <h2><span jhiTranslate="eFormApp.employee.detail.title">Employee</span> {{ employee.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="eFormApp.employee.firstName">First Name</span></dt>
+                <dd>
+                    <span>{{ employee.firstName }}</span>
+                </dd>
+                <dt><span jhiTranslate="eFormApp.employee.lastName">Last Name</span></dt>
+                <dd>
+                    <span>{{ employee.lastName }}</span>
+                </dd>
+                <dt><span jhiTranslate="eFormApp.employee.email">Email</span></dt>
+                <dd>
+                    <span>{{ employee.email }}</span>
+                </dd>
+                <dt><span jhiTranslate="eFormApp.employee.phoneNumber">Phone Number</span></dt>
+                <dd>
+                    <span>{{ employee.phoneNumber }}</span>
+                </dd>
+                <dt><span jhiTranslate="eFormApp.employee.hireDate">Hire Date</span></dt>
+                <dd>
+                    <span>{{ employee.hireDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="eFormApp.employee.ibanNo">Iban No</span></dt>
+                <dd>
+                    <span>{{ employee.ibanNo }}</span>
+                </dd>
+                <dt><span jhiTranslate="eFormApp.employee.company">Company</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'eFormApp.Company.' + employee.company }}">{{ employee.company }}</span>
+                </dd>
+                <dt><span jhiTranslate="eFormApp.employee.language">Language</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'eFormApp.Language.' + employee.language }}">{{ employee.language }}</span>
+                </dd>
+                <dt><span jhiTranslate="eFormApp.employee.streetAddress">Street Address</span></dt>
+                <dd>
+                    <span>{{ employee.streetAddress }}</span>
+                </dd>
+                <dt><span jhiTranslate="eFormApp.employee.postalCode">Postal Code</span></dt>
+                <dd>
+                    <span>{{ employee.postalCode }}</span>
+                </dd>
+                <dt><span jhiTranslate="eFormApp.employee.city">City</span></dt>
+                <dd>
+                    <span>{{ employee.city }}</span>
+                </dd>
+                <dt><span jhiTranslate="eFormApp.employee.stateProvince">State Province</span></dt>
+                <dd>
+                    <span>{{ employee.stateProvince }}</span>
+                </dd>
+                <dt><span jhiTranslate="eFormApp.employee.country">Country</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'eFormApp.Country.' + employee.country }}">{{ employee.country }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/employee', employee.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

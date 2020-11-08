@@ -50,6 +50,9 @@ public class CacheConfiguration {
             createCache(cm, ch.egroup.eform.domain.User.class.getName());
             createCache(cm, ch.egroup.eform.domain.Authority.class.getName());
             createCache(cm, ch.egroup.eform.domain.User.class.getName() + ".authorities");
+            createCache(cm, ch.egroup.eform.domain.Location.class.getName());
+            createCache(cm, ch.egroup.eform.domain.Employee.class.getName());
+            createCache(cm, ch.egroup.eform.domain.Employee.class.getName() + ".locations");
             // jhipster-needle-ehcache-add-entry
         };
     }

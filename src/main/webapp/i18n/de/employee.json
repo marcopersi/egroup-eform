@@ -1,0 +1,35 @@
+{
+  "eFormApp": {
+    "employee": {
+      "home": {
+        "title": "Employees",
+        "createLabel": "Employee erstellen",
+        "createOrEditLabel": "Employee erstellen oder bearbeiten",
+        "search": "Suche nach Employee",
+        "notFound": "No Employees found"
+      },
+      "created": "Employee erstellt mit ID {{ param }}",
+      "updated": "Employee aktualisiert mit ID {{ param }}",
+      "deleted": "Employee gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Employee {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Employee"
+      },
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phoneNumber": "Phone Number",
+      "hireDate": "Hire Date",
+      "ibanNo": "Iban No",
+      "company": "Company",
+      "language": "Language",
+      "streetAddress": "Street Address",
+      "postalCode": "Postal Code",
+      "city": "City",
+      "stateProvince": "State Province",
+      "country": "Country"
+    }
+  }
+}
