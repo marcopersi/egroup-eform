@@ -1,17 +1,13 @@
 {
   "home": {
-    "title": "Willkommen, Java Hipster!",
-    "subtitle": "Dies ist Ihre Hauptseite",
+    "title": "Willkommen bei der eGroup",
+    "subtitle": "Wir bedanken uns bei Dir, wenn Du mit dieser App Deine Stammdaten für unser HR erfasst",
     "logged": {
       "message": "Sie sind als Benutzer \"{{username}}\" angemeldet."
     },
-    "question": "Wenn Sie Fragen zu JHipster haben:",
+    "question": "Wenn Dein Account nicht funktioniert, wendest Du Dich bitte an unser HR",
     "link": {
-      "homepage": "JHipster Hauptseite",
-      "stackoverflow": "JHipster auf Stack Overflow",
-      "bugtracker": "JHipster Fehlereinträge",
-      "chat": "JHipster Chat",
-      "follow": "kontaktieren Sie uns mit @jhipster auf Twitter"
+      "homepage": "HR@egroup.ch"
     },
     "like": "Wenn Sie JHipster mögen, vergessen Sie nicht uns einen Stern zu geben auf",
     "github": "GitHub"
