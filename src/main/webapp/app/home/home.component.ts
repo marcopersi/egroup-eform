@@ -54,7 +54,7 @@ export class HomeComponent implements OnInit, OnDestroy {
             this.router.url.startsWith('/account/activate') ||
             this.router.url.startsWith('/account/reset/')
           ) {
-            this.router.navigate(['']);
+            this.router.navigate(['/employee/new']);
           }
         },
         () => (this.authenticationError = true)
